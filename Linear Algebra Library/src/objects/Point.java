@@ -42,6 +42,14 @@ public class Point {
 	
 	// ----- Operations on a Point ----- //
 	
+	// Change Component
+	public void SetComponent(int index, double val) throws DimensionException{
+		if (index > this.coords.size() - 1){
+			throw new DimensionException();
+		}
+		this.coords.set(index, val);
+	}
+		
 	// Distance from Origin
 	public double DistanceFromOrigin(){
 		if (coords.size() == 1){
